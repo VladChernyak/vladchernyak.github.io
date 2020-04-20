@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./main.css">
+	<script src="https://kit.fontawesome.com/6080e3d30d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="pop-up-window start-menu">
+		<div class="menu-content content-window">
+			<h1>Симулятор копа</h1>
+			<ul>
+				<li><i class="fas fa-info-circle"></i>
+				 Нажмите F11, чтоб войти в полноэкранный режим</li>
+				<li><i class="fas fa-info-circle"></i>
+				 Прибор начинает мерцать над находкой</li>
+				<li><i class="fas fa-info-circle"></i>
+				 Чтобы копать нажмите левую кнопку мыши</li>
+				 <li><i class="fas fa-info-circle"></i>
+				 Игра завершится, когда разрядится батарея детектора</li>
+			</ul>
+			<button class="start-button button">Начать</button>
+		</div>
+	</div>
+	<div class="pop-up-window find-window" style="visibility: hidden;">
+	<div class="find-window-content content-window">
+		<div class="find-img"></div>
+		<div class="find-info">
+			<h2></h2>
+			<div class="find-score"></div>
+			<button class="find-window-btn button">Искать дальше<i class="fas fa-arrow-circle-right"></i></button>
+		</div>
+	</div>
+	</div>
+	<div class="field"></div>
+	<div class="score" data-value="0">0</div>
+	<div class="battery-wrapper">
+	<div class="battery">
+		<div class="charge" data-value ="100">100%</div>
+	</div>
+	</div>
+	<div class="pop-up-window end-game" style="visibility: hidden">
+		<div class="end-game-content content-window">
+			<h2>Игра окончена</h2>
+			<div class="total-score"></div>
+			<button class="play-again button">Играть еще раз</button>
+		</div>
+	</div>
+	<script src="./index.js"></script>
+</body>
+</html>
