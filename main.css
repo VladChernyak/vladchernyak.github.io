@@ -297,9 +297,7 @@ li i {
 	}
 }
 
-@media only screen 
-and (min-device-width : 320px) 
-and (max-device-width : 820px) {
+@media (max-device-width : 820px) {
 
 	.field {
 		display: none;
@@ -325,7 +323,7 @@ and (max-device-width : 820px) {
 		font-size: 20px;
 	}
 
-	.body {
+	body {
 		background-color: #e0d8c1;
 	}
 
