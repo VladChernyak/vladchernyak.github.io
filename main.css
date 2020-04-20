@@ -60,13 +60,13 @@ html,body {
 }
 
 .attention-mobile h2 {
-	margin-bottom: 100px;
-	font-size: 3.5vh;
+	margin-bottom: 5.5vh;
+	font-size: 65px;
 }
 
 .attention-mobile img {
 	height: 20vh;
-	margin-bottom: 100px;
+	margin-bottom: 5.5vh;
 }
 
 .attention-mobile p {
@@ -312,6 +312,18 @@ and (max-device-width : 820px) {
 
 	.attention-mobile {
 		visibility: visible;
+	}
+
+}
+
+@media(min-device-width: 580px) {
+
+	.attention-mobile h2 {
+		font-size: 35px;
+	}
+		
+	.attention-mobile p {
+		font-size: 25px;
 	}
 
 }
