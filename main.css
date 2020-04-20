@@ -311,6 +311,10 @@ li i {
 		visibility: visible;
 	}
 
+	body {
+		background-color: #e0d8c1;
+	}
+
 }
 
 @media(min-device-width: 580px) {
@@ -321,10 +325,6 @@ li i {
 		
 	.attention-mobile p {
 		font-size: 20px;
-	}
-
-	body {
-		background-color: #e0d8c1;
 	}
 
 }
