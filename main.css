@@ -15,6 +15,40 @@ html,body {
 	overflow: hidden;
 }
 
+.app-wrapper {
+	height: inherit;
+	width: inherit;
+	visibility: hidden;
+}
+
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: inherit;
+	height: inherit;
+	background-color: #e0d8c1;
+	z-index: 500;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.loading h2 {
+	margin-bottom: 30px;
+}
+
+.loading-wheel {
+	width: 40px;
+	height: 40px;
+	border: 5px solid #fff;
+	border-left-color: #7a7a7a;
+	border-radius: 50%;
+	transform: rotate(0deg);
+	animation: .5s loading linear infinite;
+}
+
 .pop-up-window {
 	position: absolute;
 	top: 0;
@@ -211,7 +245,6 @@ li i {
 .find-wrapper:hover {
 	cursor: url("img/cursor.cur") 25 25, crosshair;
 	animation: cursor .2s infinite linear;
-	-moz-animation: cursor .2s infinite linear;
 }
 
 .find-window-content {
@@ -297,13 +330,15 @@ li i {
 	}
 }
 
+@keyframes loading {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 @media (max-device-width : 820px) {
 
-	.field {
-		display: none;
-	}
-
-	.pop-up-window {
+	.app-wrapper {
 		display: none;
 	}
 

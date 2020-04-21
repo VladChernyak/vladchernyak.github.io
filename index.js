@@ -192,6 +192,11 @@ const game = new Game();
 const score = new Score();
 const battery = new Timer();
 
+window.onload = function() {
+  document.querySelector('.loading').style.display = 'none';
+  document.querySelector('.app-wrapper').style.visibility = 'visible';
+}
+
 menu.menuButton.onclick = function(event) {
   game.createFindList();
   game.addFindOnField();
@@ -211,8 +216,12 @@ game.field.addEventListener('click', function(event) {
 
 game.field.addEventListener ('click', function(event) {
       if(event.target.className === 'find') {
+        if(event.target.classList.contains('finded')) return;
+        
+        event.target.classList.add('finded');
         event.target.style.opacity = 1;
         score.addScore(event.target.dataset.value);
+        event.target.setAttribute('disabled', 'true');
         setTimeout(function() {game.showFindWindow(event.target)}, 1000);
       }
 });
